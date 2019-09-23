@@ -1,5 +1,5 @@
 # pedometro
-Projeto da disciplina Infraestrutura de Hardware 
+Projeto da disciplina Infraestrutura de Hardware   
 Bacharelado de Sistemas da Informação - UFRPE
 
 Referências:
