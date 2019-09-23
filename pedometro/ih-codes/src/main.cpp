@@ -148,6 +148,14 @@ uint8_t teapotPacket[14] = { '$', 0x02, 0,0, 0,0, 0,0, 0,0, 0x00, 0x00, '\r', '\
 float pitch1;
 float pitch2;
 int qtdPassos;
+boolean mulher = false;
+boolean homem = false;
+float altura;
+float cp; // comprimento do passo
+float dp; // Distância percorrida
+const unsigned long segundo = 1000;
+unsigned long tempo;
+unsigned long veloc; // velocidade
 // Fim - Eliana
 
 
@@ -178,6 +186,23 @@ void countStep(){
         Serial.println("passos.");   
         pitch1 = pitch2;
     }
+}
+float distanciaPecorrida(){
+    if (mulher){
+        cp = altura * 0.415;
+    }else if(homem){
+        cp = altura * 0.413;
+    }
+    if (cp >0){
+        dp = cp * qtdPassos; 
+    }
+    return dp;
+}
+float velocidade(){
+    tempo = millis();
+    tempo = tempo/segundo;
+    veloc = tempo;
+    return veloc;
 }
 // Fim - Eliana
 // ================================================================
