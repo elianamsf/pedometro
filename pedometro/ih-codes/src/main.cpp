@@ -248,8 +248,8 @@ BLYNK_WRITE(V1)
 {
     mulher = !mulher;
     // Desliga o botão Homem
-    Blynk.virtualWrite(V5,LOW);
-    Blynk.setProperty(V5, "offLabel","Homem");
+    Blynk.virtualWrite(V2,LOW);
+    Blynk.setProperty(V2, "offLabel","Homem");
 }
 BLYNK_WRITE(V3)
 {
